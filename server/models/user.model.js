@@ -36,7 +36,7 @@ UserSchema
     return this._password
   })
 
-UserSchema.path('hasehd_password').validate(function (v) {
+UserSchema.path('hashed_password').validate(function (v) {
   if (this._password && this._password.length < 6) {
     this.invalidate('password', 'Pawword must be at least 6 characters.')
   }
