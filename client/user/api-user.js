@@ -51,7 +51,7 @@ const update = async (params, credentials, user) => {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + credentials.t
       },
-      body: JSON.stringify(user)
+      body: user
     })
     return await response.json()
   } catch (err) {
